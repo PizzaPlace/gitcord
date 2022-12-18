@@ -1,0 +1,21 @@
+name = "gitcord"
+main = "./build/index.js"
+workers_dev = true
+compatibility_date = "2022-12-18"
+
+kv_namespaces = [{ binding = "DB", id = "551270a589884cbe8699a691b1f2b637" }] # Change this with your own KV namespace ID.
+
+[build]
+command = "npm run build"
+
+[vars]
+# Sensitive data should be stored in the worker itself as an encrypted value... do NOT commit your secrets to a public source control service.
+# You can use the `wrangler` command to set your environment variables as so:
+# - `wrangler secret put <key>` where key is the environment variable name.
+#
+# Sensitive environment variables:
+# - GITHUB_WEBHOOK_SECRET - your secret for webhooks, https://generate-secret.vercel.app/32 if you want a nice secure secret.
+# - DISCORD_WEBHOOK       - your discord webhook link, remember to make sure the webhook points to a forum channel.
+
+IGNORED_USERS = "renovate[bot],github-actions[bot],cloudflare-pages[bot]" # Users to ignore, separated by commas, nobody wants to see renovate's PRs.
+REDIRECT_URL = "https://github.com/PizzaPlace/gitcord" # The URL the user will be redirected to if they visit the Cloudflare Worker route directly.
