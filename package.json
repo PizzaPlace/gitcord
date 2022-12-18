@@ -15,6 +15,8 @@
     "@cloudflare/workers-types": "4.20221111.1",
     "@octokit/webhooks-types": "6.8.0",
     "@tsconfig/node18-strictest-esm": "1.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
     "eslint": "8.30.0",
     "typescript": "4.9.4",
     "wrangler": "2.6.2"
