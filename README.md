@@ -25,3 +25,7 @@ wrangler secret put DISCORD_WEBHOOK
 ## How do I set up the webhook?
 
 Go to your repository's settings, and click on the "Webhooks" tab. Click "Add webhook", and set the URL to your Cloudflare Worker route. Set the secret to the one you generated earlier. Set the content type to `application/json`, and select some of the event options, or if you want a clean feed select 'Just the push event'.
+
+## Credits
+
+Thanks to the Promise Solutions team for the original version of this project.
